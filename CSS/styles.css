@@ -1,0 +1,487 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: var(--MainColor);
+    
+}
+html {
+    scroll-behavior: smooth;
+  }
+:root {
+   /* --MainColor:#2A2166;
+    --color2:#0F0266;
+    --color3:#1B04B3;
+    --color4:#2305E6;
+    --color5:#604BEA;*/         
+    --MainColor:#27754D;          
+    --color2:#04753B;
+    --color3:#06C261;
+    --color4:#07F57B;
+    --color5:#51F7A1;
+}
+#backToTop{
+    position:fixed;
+    bottom:0px;
+    right:0px;
+    background-color: var(--MainColor);
+    width: 0px;
+    height:0px;
+    z-index:1;
+    border-radius:90% 0 0 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:all 0.25s;
+}
+#backToTop strong{
+    color: #EEEEEE;
+    transform: translate(5px, 5px) rotate(-90deg) ;
+    font-size:1.25em;
+}
+header{
+   /* border: red solid;*/
+    width: 100%;
+    height: 30vh;
+    
+}
+
+header svg{
+    position: fixed;
+   width: 100%;
+   z-index: 2;
+
+  
+}
+
+header svg :nth-child(3) {
+    fill:var(--MainColor);
+    transition: unset;
+    
+}
+header svg :nth-child(2) {
+    fill:var(--color4);
+    transition: unset;
+    
+}
+
+nav{
+   /* border :blue solid;*/
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    transition: all 0.5s;
+   /* border: #27754D solid;*/
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+   /* border: olive solid;*/
+    /*position: absolute;
+    right:60px;*/
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    transition: all 0.5s ease-out;
+    /*transform:translateY(50px)*/
+    margin-left: auto;
+}
+
+
+nav ul li{
+    width: 10%;
+    
+}
+#menu-icon{
+    color: #EEEEEE;
+    margin:10px;
+    font-size: 1.5em;
+    display:none;
+    z-index: 2;
+    cursor: pointer;
+    
+}
+
+.mobileMenu{
+    z-index:1;
+    background: var(--MainColor);
+    width: 0%;
+    height: 0%;
+    position: fixed;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.5s;
+}
+
+li button{
+    background-color: transparent;
+    color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10rem;
+    height: 7vh;
+    width: 7vw;
+    border: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+
+
+nav ul li div button{
+    color: var(--MainColor) ;
+}
+main{
+    position :relative;
+    margin-top: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+h1{
+    
+   /* border: #484848 solid;*/
+    text-align: center;
+    
+    margin: 2em;
+    font-size: 3em;
+}
+h1 p{
+    font-size: .5em;
+    font-weight: normal;
+}
+
+.card{
+   /* border: #7a21e1 solid;*/
+    width: 20em;
+    height: 20em;
+    margin:5em;
+    border-radius: 30px;
+    box-shadow: 0px 15px 30px var(--MainColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #eeeeee;
+}
+.card-title{
+font-size: 1.5em;
+font-weight: bold;
+/*border: #15ea65 solid;*/
+}
+
+p{
+    padding: 20px;
+}
+img{
+   /* border: #121212 solid;*/
+   margin: 20px;
+}
+.mobile-caption{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mobile-caption svg{
+    position: absolute;
+    z-index: -1;
+    transform: translateX(20em);
+}
+.card.mobile{
+   align-items: center; 
+}
+.card.mobile button{
+    background-color: var(--MainColor);
+    border-radius: 30px;
+    color: #EEEEEE;
+    cursor: pointer;
+    border: transparent;
+    outline: none;
+    width: 7em;
+    height: 3em;
+}
+.reviews{
+    
+    /*border: yellow solid;*/
+    width: 60%;
+    height: 5em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    transform: translateY(4em);
+}
+.reviews span{
+    /*border: tomato solid;*/
+    width: 5em;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.reviews span h3{
+    border: 1px var(--MainColor) solid;
+    border-radius: 4px;
+}
+.blogger{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
+    margin-bottom: 10em;
+}
+.backGround{
+    background-color: var(--MainColor) ;
+    width: 70%;
+    height: 15em;
+    z-index: -1;
+    border-radius: 30px;
+    position: absolute;
+    
+       
+}
+.card.blog{
+   max-height: 17em; 
+   max-width: 20em;
+   min-width: 10em;
+   min-height: 8.5em;
+   transform: translateY(7em);
+   align-items: center;
+   justify-content: center;
+   
+}
+
+.card.blog img{
+    width: 50%;
+    height: 90%;
+}
+h2{
+    font-size:2em;
+    margin:30px;
+}
+.getInTouch div {
+   /* border:black solid;*/
+    margin-top: auto;
+    width: 70%;
+    height: 10em;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    
+}
+.getInTouch{
+    /*border: brown solid ;*/
+    width: 100%;
+    height:30em;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+.getInTouch div button{
+    width: 15em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border: transparent;
+    outline: none;
+    cursor:pointer;
+    margin:auto;
+}
+
+.icons{
+    font-size: 3em;
+}
+
+#contactUs-button{
+   /* border:#78ae12 solid;*/
+    width: 10em;
+    height:10em;
+    margin-top:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    cursor: pointer;
+}
+#contactUs-button strong{
+    transform:rotate(90deg);
+    transition: all 0.5s ;
+    font-size:1.5em;
+    margin: 10px;
+}
+
+.contact-us{
+    width:100%;
+    height: 0em;
+    background-color: var(--MainColor);
+    transition:all 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.contact-us .form{
+    
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(1fr,4);
+    grid-gap:20px;
+}
+
+.contact-us .form div{
+    background-color: var(--MainColor);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact-us .form div *{
+    margin-left: 20px;
+    padding: 10px;
+    color: #EEEEEE;
+}
+
+.contact-us .form div:nth-of-type(1){
+    grid-area:1/1/1/3;
+   /* background-color: blue;*/
+}
+
+.contact-us .form div:nth-of-type(2){
+    grid-area:2/1/2/3;
+   /* background-color: brown;*/
+}
+
+.contact-us .form div:nth-of-type(3){
+    grid-area:3/1/3/3;
+/*background-color: chartreuse;*/
+
+}
+
+.contact-us .form div:nth-of-type(4){
+    grid-area:1/3/4/5;
+    /*background-color: darkgoldenrod;*/
+}
+.contact-us .form div:nth-of-type(5){
+    grid-area:4/1/4/5;
+   /* background-color: darkorchid;*/
+}
+
+.contact-us .form div:nth-of-type(6){
+    grid-area:5/1/5/5;
+   /* background-color: deepskyblue;*/
+}
+
+input,textarea{
+    background-color: var(--color2);
+    border: none;
+    outline:  none ;
+    font-size: 1.1em;
+    border-radius: 5px;
+    width: 80%;
+    resize: none;
+}
+
+#message{
+    height: 80%;
+}
+
+.options{
+width: 100%;
+height:10vh;
+display: flex;
+/*justify-content: space-evenly;*/
+align-items: center;
+flex-wrap: wrap;
+/*border:white solid;*/
+}
+
+.form div button{
+    color: var(--MainColor);
+    border-radius: 30px;
+    background-color: var(--color3);
+    border: transparent;
+    outline: none;
+    cursor: pointer;
+    width: 10em;
+    margin:auto;
+}
+
+#sendMessage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+}
+
+#sendMessage button{
+    width: 15em;
+    background-color: tomato;
+}
+footer{
+    width:100%;
+    height: 0em;
+}
+
+@media screen and (max-width:900px){
+    
+    nav ul{
+        height: 60vh;
+        width: 90%;
+        position: absolute;
+       /* border: yellow solid;*/
+        display: flex;
+        flex-direction: column;
+        margin-top: 40em;
+    }
+    nav ul li button{
+        width:8em;
+        height: 4em;
+    }
+
+    header{
+        height:15vh;
+    }
+    header svg{
+        display:none;
+    }
+    nav{
+       /* border: indigo solid;*/
+        height:6em;
+        background-color: var(--MainColor) ;
+        position: fixed;
+        z-index: 1;
+        transition: all 0.5s;
+    }
+    #menu-icon{
+        display:block;
+    }
+    .options{
+        height:50vh;
+        justify-content:space-between;
+    }
+    .contact-us .form{
+        display:flex;
+        flex-direction:column;
+    }
+    
+    .getInTouch{
+        height:50em;
+    }
+    .getInTouch div{
+        height:20em;
+    }
+    #contactUs-button{
+        height: 10em;
+    }
+}
